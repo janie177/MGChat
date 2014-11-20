@@ -1,0 +1,6 @@
+main: com.minegusta.mgchat.Main
+name: MGChat
+version: ${project.version}
+authors: [HmmmQuestionMark, janie177]
+depend: [Chitchat]
+softdepend: [Factions]

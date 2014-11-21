@@ -12,7 +12,7 @@ public enum RaceTag {
     ELF(ChatColor.DARK_GREEN + "[Elf]", 3),
     HUMAN(ChatColor.YELLOW + "[Human]", 3),
     DEMON(ChatColor.RED + "[Demon]", 3),
-    ENDERBORN(ChatColor.DARK_PURPLE + "[EnderBorn]", 3);
+    ENDERBORN(ChatColor.DARK_PURPLE + "[Enderborn]", 3);
 
 
     private DefaultPlayerTag tag;

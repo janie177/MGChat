@@ -6,6 +6,7 @@ import com.demigodsrpg.chitchat.tag.DefaultPlayerTag;
 import com.demigodsrpg.chitchat.tag.PlayerTag;
 import com.demigodsrpg.chitchat.tag.WorldPlayerTag;
 import com.minegusta.mgchat.tags.FactionTag;
+import com.minegusta.mgchat.tags.RaceTag;
 import com.minegusta.mgchat.tags.RankTag;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.Plugin;
@@ -27,6 +28,14 @@ public class Main extends JavaPlugin
 
         //Only enable factions tags when factions is enabled.
         if(Bukkit.getPluginManager().isPluginEnabled("Factions")) format.add(new FactionTag());
+
+        if(Bukkit.getPluginManager().isPluginEnabled("MGRaces"))
+        {
+            for(RaceTag tag : RaceTag.values())
+            {
+                format.add(tag.getTag());
+            }
+        }
 
         for(RankTag tag : RankTag.values()) {
 

@@ -46,6 +46,14 @@
         </dependency>
 
         <dependency>
+            <groupId>MGRaces</groupId>
+            <artifactId>MGRaces</artifactId>
+            <version>1.0</version>
+            <systemPath>${basedir}/lib/MgRaces.jar</systemPath>
+            <scope>system</scope>
+        </dependency>
+
+        <dependency>
             <groupId>factions</groupId>
             <artifactId>factions</artifactId>
             <version>2.7</version>

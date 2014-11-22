@@ -1,34 +1,23 @@
 package com.minegusta.mgchat.tags;
 
-import com.demigodsrpg.chitchat.tag.DefaultPlayerTag;
-import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
-import org.bukkit.permissions.Permission;
-import org.bukkit.permissions.PermissionDefault;
+import com.demigodsrpg.chitchat.tag.PlayerTag;
+import com.minegusta.mgraces.util.RaceManager;
+import org.bukkit.entity.Player;
 
-public enum RaceTag {
+public class RaceTag implements PlayerTag {
 
-    DWARF(ChatColor.DARK_GRAY + "[Dwarf]", 3),
-    ELF(ChatColor.DARK_GREEN + "[Elf]", 3),
-    HUMAN(ChatColor.YELLOW + "[Human]", 3),
-    DEMON(ChatColor.RED + "[Demon]", 3),
-    ENDERBORN(ChatColor.DARK_PURPLE + "[Enderborn]", 3);
-
-
-    private DefaultPlayerTag tag;
-
-    private RaceTag(String text, int priority)
-    {
-        tag = new DefaultPlayerTag(name(), "minegusta.rank." + name().toLowerCase(), text, priority);
-        try
-        {
-            Bukkit.getPluginManager().addPermission(new Permission("minegusta.rank." + name().toLowerCase(), PermissionDefault.FALSE));
-        }
-        catch (Exception ignored){}
+    @Override
+    public String getName() {
+        return "race";
     }
 
-    public DefaultPlayerTag getTag()
-    {
-        return tag;
+    @Override
+    public String getFor(Player player) {
+        return RaceManager.getRace(player);
+    }
+
+    @Override
+    public int getPriority() {
+        return 3;
     }
 }

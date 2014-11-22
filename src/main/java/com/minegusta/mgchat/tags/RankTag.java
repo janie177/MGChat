@@ -10,7 +10,7 @@ public enum RankTag
 {
     ADMIN(ChatColor.DARK_RED + "[A]", 5),
     MODERATOR(ChatColor.DARK_AQUA + "[M]", 5),
-    MODPLUS(ChatColor.DARK_AQUA + "[M" + ChatColor.GOLD + "+" + ChatColor.DARK_AQUA + "]", 5),
+    MODERATORPLUS(ChatColor.DARK_AQUA + "[M" + ChatColor.GOLD + "+" + ChatColor.DARK_AQUA + "]", 5),
     TRUSTED(ChatColor.BLUE + "[T]", 5),
     OWNER(ChatColor.YELLOW + "[O]", 5),
     OVERSEER(ChatColor.GRAY + "«" + ChatColor.GOLD + "" + ChatColor.MAGIC + "|||" + ChatColor.RESET + ChatColor.GRAY + "»", 5),

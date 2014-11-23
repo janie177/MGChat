@@ -18,6 +18,6 @@ public class RaceTag implements PlayerTag {
 
     @Override
     public int getPriority() {
-        return 3;
+        return 2;
     }
 }

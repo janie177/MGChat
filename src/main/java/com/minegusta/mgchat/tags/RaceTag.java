@@ -4,7 +4,7 @@ import com.demigodsrpg.chitchat.tag.PlayerTag;
 import com.minegusta.mgraces.util.RaceManager;
 import org.bukkit.entity.Player;
 
-public class RaceTag implements PlayerTag {
+public class RaceTag extends PlayerTag {
 
     @Override
     public String getName() {

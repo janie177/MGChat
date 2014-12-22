@@ -4,9 +4,10 @@ package com.minegusta.mgchat.tags;
 import com.demigodsrpg.chitchat.tag.PlayerTag;
 import com.massivecraft.factions.entity.Faction;
 import com.massivecraft.factions.entity.MPlayer;
+import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 
-public class FactionTag implements PlayerTag {
+public class FactionTag extends PlayerTag {
     @Override
     public String getName() {
         return "faction";
@@ -18,7 +19,7 @@ public class FactionTag implements PlayerTag {
         Faction faction = uplayer.getFaction();
         String factionName = faction.getName();
         if(factionName.contains("Wilderness")) factionName = "";
-        else factionName = "[" + factionName + "]";
+        else factionName = "[" +factionName + "]";
         return factionName;
     }
 

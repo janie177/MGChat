@@ -29,7 +29,7 @@ public class Main extends JavaPlugin
         //Only enable factions tags when factions is enabled.
         if(Bukkit.getPluginManager().isPluginEnabled("Factions")) format.add(new FactionTag());
 
-        if(Bukkit.getPluginManager().isPluginEnabled("MGRaces")) format.add(new RaceTag());
+        if(Bukkit.getPluginManager().isPluginEnabled("MGRacesRedone")) format.add(new RaceTag());
 
         for(RankTag tag : RankTag.values()) {
 

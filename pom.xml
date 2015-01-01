@@ -46,10 +46,10 @@
         </dependency>
 
         <dependency>
-            <groupId>MGRaces</groupId>
-            <artifactId>MGRaces</artifactId>
+            <groupId>MGRacesRedone</groupId>
+            <artifactId>MGRacesRedone</artifactId>
             <version>1.0</version>
-            <systemPath>${basedir}/lib/MgRaces.jar</systemPath>
+            <systemPath>${basedir}/lib/MgRacesRedone.jar</systemPath>
             <scope>system</scope>
         </dependency>
 

@@ -1,7 +1,7 @@
 package com.minegusta.mgchat.tags;
 
 import com.demigodsrpg.chitchat.tag.PlayerTag;
-import com.minegusta.mgraces.util.RaceManager;
+import com.minegusta.mgracesredone.main.Races;
 import org.bukkit.entity.Player;
 
 public class RaceTag extends PlayerTag {
@@ -13,7 +13,7 @@ public class RaceTag extends PlayerTag {
 
     @Override
     public String getFor(Player player) {
-        return RaceManager.getRace(player);
+        return Races.getRace(player).getTag();
     }
 
     @Override

@@ -16,6 +16,7 @@ public enum RankTag
     OVERSEER(ChatColor.GRAY + "«" + ChatColor.GOLD + "" + ChatColor.MAGIC + "|||" + ChatColor.RESET + ChatColor.GRAY + "»", 5),
     BUILDERPLUS(ChatColor.DARK_GREEN + "[B+]", 5),
     BUILDER(ChatColor.GREEN + "[B]", 5),
+    HEADADMIN(ChatColor.RED + "[C]", 5),
     DONOR10(ChatColor.GOLD + "[" + ChatColor.DARK_GREEN + "10" + ChatColor.GOLD + "]", 4),
     DONOR20(ChatColor.GOLD + "[" + ChatColor.DARK_GREEN + "20" + ChatColor.GOLD + "]", 4),
     DONOR30(ChatColor.GOLD + "[" + ChatColor.DARK_GREEN + "30" + ChatColor.GOLD + "]", 4),

@@ -5,6 +5,7 @@ import com.demigodsrpg.chitchat.format.ChatFormat;
 import com.demigodsrpg.chitchat.tag.DefaultPlayerTag;
 import com.demigodsrpg.chitchat.tag.PlayerTag;
 import com.demigodsrpg.chitchat.tag.WorldPlayerTag;
+import com.minegusta.mgchat.listener.FactionChatListener;
 import com.minegusta.mgchat.tags.FactionTag;
 import com.minegusta.mgchat.tags.RaceTag;
 import com.minegusta.mgchat.tags.RankTag;
@@ -25,6 +26,8 @@ public class Main extends JavaPlugin
         //Adding tags (priority matters)
         ChatFormat format = Chitchat.getChatFormat();
         format.add(new WorldPlayerTag());
+
+        Bukkit.getPluginManager().registerEvents(new FactionChatListener(), this);
 
         //Only enable factions tags when factions is enabled.
         if(Bukkit.getPluginManager().isPluginEnabled("Factions")) format.add(new FactionTag());

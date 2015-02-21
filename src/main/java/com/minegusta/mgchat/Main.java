@@ -27,10 +27,12 @@ public class Main extends JavaPlugin
         ChatFormat format = Chitchat.getChatFormat();
         format.add(new WorldPlayerTag());
 
-        Bukkit.getPluginManager().registerEvents(new FactionChatListener(), this);
-
         //Only enable factions tags when factions is enabled.
-        if(Bukkit.getPluginManager().isPluginEnabled("Factions")) format.add(new FactionTag());
+        if(Bukkit.getPluginManager().isPluginEnabled("Factions"))
+        {
+            Bukkit.getPluginManager().registerEvents(new FactionChatListener(), this);
+            format.add(new FactionTag());
+        }
 
         if(Bukkit.getPluginManager().isPluginEnabled("MGRacesRedone")) format.add(new RaceTag());
 

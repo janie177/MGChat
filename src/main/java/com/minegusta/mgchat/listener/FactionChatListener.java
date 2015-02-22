@@ -38,7 +38,8 @@ public class FactionChatListener implements Listener
             String send = ChatColor.DARK_PURPLE + "[AC] " + ChatColor.BOLD + p.getName()+ ": " + ChatColor.LIGHT_PURPLE + message.substring(2, message.length());
             for(String s : faction.getRelationWishes().keySet())
             {
-                if(faction.getRelationWish(faction = ARFaction.get().read("s").getResult()) == Rel.ALLY)
+                Rel wish = faction.getRelationWish(ARFaction.get().read("s").getResult());
+                if(wish != null && wish == Rel.ALLY)
                 {
                     Faction ally = ARFaction.get().read(s).getResult();
                     for(Player allyPlayer : ally.getOnlinePlayers())

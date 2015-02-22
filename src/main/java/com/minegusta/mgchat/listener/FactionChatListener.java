@@ -35,7 +35,7 @@ public class FactionChatListener implements Listener
 
         if(message.startsWith("!!"))
         {
-            String send = ChatColor.DARK_PURPLE + "[AC] " + ChatColor.LIGHT_PURPLE + message.substring(2, message.length() - 1);
+            String send = ChatColor.DARK_PURPLE + "[AC] " + ChatColor.BOLD + p.getName()+ ": " + ChatColor.LIGHT_PURPLE + message.substring(2, message.length());
             for(String s : faction.getRelationWishes().keySet())
             {
                 if(faction.getRelationWish(faction = ARFaction.get().read("s").getResult()) == Rel.ALLY)
@@ -47,10 +47,14 @@ public class FactionChatListener implements Listener
                     }
                 }
             }
+            for(Player player : faction.getOnlinePlayers())
+            {
+                player.sendMessage(send);
+            }
         }
         else
         {
-            String send = ChatColor.GREEN + "[FC] " + ChatColor.DARK_GREEN + message.substring(1, message.length() - 1);
+            String send = ChatColor.GREEN + "[FC] " + ChatColor.BOLD + p.getName()+ ": " + ChatColor.DARK_GREEN + message.substring(1, message.length());
             for(Player player : faction.getOnlinePlayers())
             {
                 player.sendMessage(send);

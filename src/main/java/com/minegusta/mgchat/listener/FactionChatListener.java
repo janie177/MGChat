@@ -36,7 +36,7 @@ public class FactionChatListener implements Listener
 
         if(message.startsWith("!!"))
         {
-            String prefix = ChatColor.DARK_PURPLE + "[AC] ";
+            String prefix = ChatColor.DARK_PURPLE + "[" + ChatColor.LIGHT_PURPLE + "AC" + ChatColor.DARK_PURPLE + "w] ";
             String name = ChatColor.BOLD + p.getName()+ ": ";
             String sendMessage = ChatColor.LIGHT_PURPLE + message.substring(2, message.length());
             String fname = ChatColor.DARK_PURPLE + "[" + ChatColor.LIGHT_PURPLE + factionName + ChatColor.DARK_PURPLE + "] ";

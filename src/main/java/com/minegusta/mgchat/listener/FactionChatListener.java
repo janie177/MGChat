@@ -8,6 +8,7 @@ import com.massivecraft.factions.entity.Faction;
 import com.massivecraft.factions.entity.FactionColl;
 import com.massivecraft.factions.entity.MPlayer;
 import net.md_5.bungee.api.ChatColor;
+import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
@@ -35,22 +36,26 @@ public class FactionChatListener implements Listener
 
         if(message.startsWith("!!"))
         {
-            String send = ChatColor.DARK_PURPLE + "[AC] " + ChatColor.BOLD + p.getName()+ ": " + ChatColor.LIGHT_PURPLE + message.substring(2, message.length());
+            String prefix = ChatColor.DARK_PURPLE + "[AC] ";
+            String name = ChatColor.BOLD + p.getName()+ ": ";
+            String sendMessage = ChatColor.LIGHT_PURPLE + message.substring(2, message.length());
+            String fname = ChatColor.DARK_PURPLE + "[" + ChatColor.LIGHT_PURPLE + factionName + ChatColor.DARK_PURPLE + "] ";
+
             for(String s : faction.getRelationWishes().keySet())
             {
-                Rel wish = faction.getRelationWish(ARFaction.get().read("s").getResult());
+                Rel wish = faction.getRelationTo(ARFaction.get().read(s).getResult());
                 if(wish != null && wish == Rel.ALLY)
                 {
                     Faction ally = ARFaction.get().read(s).getResult();
                     for(Player allyPlayer : ally.getOnlinePlayers())
                     {
-                        allyPlayer.sendMessage(send);
+                        allyPlayer.sendMessage(prefix + fname + name + sendMessage);
                     }
                 }
             }
             for(Player player : faction.getOnlinePlayers())
             {
-                player.sendMessage(send);
+                player.sendMessage(prefix + fname + name + sendMessage);
             }
         }
         else

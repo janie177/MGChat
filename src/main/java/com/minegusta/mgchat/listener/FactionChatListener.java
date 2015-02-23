@@ -17,7 +17,7 @@ import org.bukkit.event.player.AsyncPlayerChatEvent;
 
 public class FactionChatListener implements Listener
 {
-    @EventHandler(priority = EventPriority.LOWEST)
+    @EventHandler(priority = EventPriority.HIGHEST)
     public void onEvent(AsyncPlayerChatEvent e)
     {
         String message = e.getMessage();
@@ -37,7 +37,7 @@ public class FactionChatListener implements Listener
 
         if(message.startsWith("!!"))
         {
-            String prefix = ChatColor.DARK_PURPLE + "[" + ChatColor.LIGHT_PURPLE + "AC" + ChatColor.DARK_PURPLE + "w] ";
+            String prefix = ChatColor.DARK_PURPLE + "[" + ChatColor.LIGHT_PURPLE + "AC" + ChatColor.DARK_PURPLE + "] ";
             String name = ChatColor.BOLD + p.getName()+ ": ";
             String sendMessage = ChatColor.LIGHT_PURPLE + message.substring(2, message.length());
             String fname = ChatColor.DARK_PURPLE + "[" + ChatColor.LIGHT_PURPLE + factionName + ChatColor.DARK_PURPLE + "] ";

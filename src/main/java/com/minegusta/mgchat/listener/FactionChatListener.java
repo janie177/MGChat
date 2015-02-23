@@ -17,7 +17,7 @@ import org.bukkit.event.player.AsyncPlayerChatEvent;
 
 public class FactionChatListener implements Listener
 {
-    @EventHandler(priority = EventPriority.HIGHEST)
+    @EventHandler(priority = EventPriority.LOW)
     public void onEvent(AsyncPlayerChatEvent e)
     {
         String message = e.getMessage();

@@ -27,6 +27,7 @@ public class FactionChatListener implements Listener
         }
 
         e.getRecipients().clear();
+        e.setCancelled(true);
 
         Player p = e.getPlayer();
         MPlayer uplayer = MPlayer.get(p);

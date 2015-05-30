@@ -11,8 +11,18 @@ public class RaceTag extends PlayerTag {
         return "race";
     }
 
+    private static final String[] uuids = new String[]{"d5133464-b1ef-42b4-9ad4-8cac217d40f0", "1fb8eb3a-5431-490a-aef4-4e544c2994be"};
+
     @Override
-    public String getFor(Player player) {
+    public String getFor(Player player)
+    {
+        for(String s : uuids)
+        {
+            if(s.equals(player.getUniqueId().toString()))
+            {
+                return "";
+            }
+        }
         return Races.getRace(player).getTag();
     }
 

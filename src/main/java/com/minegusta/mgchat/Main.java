@@ -6,6 +6,7 @@ import com.demigodsrpg.chitchat.tag.DefaultPlayerTag;
 import com.demigodsrpg.chitchat.tag.PlayerTag;
 import com.demigodsrpg.chitchat.tag.WorldPlayerTag;
 import com.minegusta.mgchat.listener.FactionChatListener;
+import com.minegusta.mgchat.listener.StaffChatListener;
 import com.minegusta.mgchat.tags.FactionTag;
 import com.minegusta.mgchat.tags.RaceTag;
 import com.minegusta.mgchat.tags.RankTag;
@@ -33,6 +34,8 @@ public class Main extends JavaPlugin
             Bukkit.getPluginManager().registerEvents(new FactionChatListener(), this);
             format.add(new FactionTag());
         }
+        
+        Bukkit.getPluginManager().registerEvents(new StaffChatListener(), this);
 
         if(Bukkit.getPluginManager().isPluginEnabled("MGRacesRedone")) format.add(new RaceTag());
 

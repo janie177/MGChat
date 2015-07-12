@@ -16,9 +16,9 @@ public class WastelandListener implements Listener {
         Player s = e.getPlayer();
         String message = e.getMessage();
         
-        if(message.startsWith("/"))return;
+        if(message.startsWith("/") || e.getPlayer().hasPermission("wasteland.farchat"))return;
         
         e.setCancelled(true);
-        Bukkit.getOnlinePlayers().stream().filter(p -> p.getLocation().distance(e.getPlayer().getLocation()) < 900).forEach(p -> p.sendMessage(Chitchat.getChatFormat().getFormattedMessage(s, message)));
+        Bukkit.getOnlinePlayers().stream().filter(p -> p.getLocation().distance(e.getPlayer().getLocation()) < 900 || p.hasPermission("wasteland.farchat")).forEach(p -> p.sendMessage(Chitchat.getChatFormat().getFormattedMessage(s, message)));
     }
 }

@@ -39,7 +39,7 @@ public class Main extends JavaPlugin
 
         if(Bukkit.getPluginManager().isPluginEnabled("MGApocalypse"))
         {
-            Bukkit.getPluginManager().registerEvents(new WastelandListener(), this);
+            //Bukkit.getPluginManager().registerEvents(new WastelandListener(), this);
         }
 
         for(RankTag tag : RankTag.values()) {

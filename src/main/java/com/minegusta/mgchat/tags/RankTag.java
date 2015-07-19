@@ -1,6 +1,7 @@
 package com.minegusta.mgchat.tags;
 
 import com.demigodsrpg.chitchat.tag.DefaultPlayerTag;
+import jdk.nashorn.internal.ir.CatchNode;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.permissions.Permission;
@@ -17,6 +18,7 @@ public enum RankTag
     BUILDERPLUS(ChatColor.DARK_GREEN + "[B+]", 5),
     BUILDER(ChatColor.GREEN + "[B]", 5),
     HEADADMIN(ChatColor.RED + "[H]", 6),
+    YOUTUBER(ChatColor.BLACK + "[" + ChatColor.WHITE + "" + ChatColor.BOLD + "Y" + ChatColor.DARK_RED + "" + ChatColor.BOLD + "T" + ChatColor.BLACK + "]", 5),
     LEGEND(ChatColor.GOLD + "[L]", 5),
     VETERAN(ChatColor.BLUE + "[V]", 5),
     DONOR10(ChatColor.GOLD + "[" + ChatColor.DARK_GREEN + "10" + ChatColor.GOLD + "]", 4),

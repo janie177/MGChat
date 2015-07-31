@@ -2,6 +2,7 @@ package com.minegusta.mgchat.tags;
 
 import com.demigodsrpg.chitchat.tag.DefaultPlayerTag;
 import jdk.nashorn.internal.ir.CatchNode;
+import net.md_5.bungee.api.chat.TextComponent;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.permissions.Permission;
@@ -38,7 +39,7 @@ public enum RankTag
     
     private RankTag(String text, int priority)
     {
-        tag = new DefaultPlayerTag(name(), "minegusta.rank." + name().toLowerCase(), text, priority);
+        tag = new DefaultPlayerTag(name(), "minegusta.rank." + name().toLowerCase(), new TextComponent(text), priority);
         try 
         {
             Bukkit.getPluginManager().addPermission(new Permission("minegusta.rank." + name().toLowerCase(), PermissionDefault.FALSE));

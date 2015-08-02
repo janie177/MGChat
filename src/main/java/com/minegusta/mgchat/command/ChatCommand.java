@@ -20,7 +20,7 @@ public class ChatCommand implements CommandExecutor {
         MPlayer uplayer = MPlayer.get(player);
         Faction faction = uplayer.getFaction();
         String factionName = faction.getName();
-        if(factionName.equalsIgnoreCase("Wilderness")) {
+        if(factionName.contains("Wilderness")) {
             player.sendMessage(ChatColor.RED + "You must be in a faction to use this!");
             return true;
         }

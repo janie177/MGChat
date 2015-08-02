@@ -30,7 +30,7 @@ public class ChatGroupListener implements Listener
         }
         event.setCancelled(true);
         event.getRecipients().clear();
-        if (factionName.equalsIgnoreCase("Wilderness")) return;
+        if (factionName.contains("Wilderness")) return;
         if (ChatGroup.alliedGroupContains(player.getName())) {
             if (factionName.contains("Wilderness")) {
                 ChatGroup.removeAlliesChat(player.getName());

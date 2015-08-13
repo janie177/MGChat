@@ -18,7 +18,7 @@ public enum RankTag
     OVERSEER(ChatColor.GRAY + "«" + ChatColor.GOLD + "" + ChatColor.MAGIC + "|||" + ChatColor.RESET + ChatColor.GRAY + "»", 5),
     BUILDERPLUS(ChatColor.DARK_GREEN + "[B+]", 5),
     NOVICE(ChatColor.RED + "[No]", 5),
-    SUDENT(ChatColor.RED + "[St]", 5),
+    STUDENT(ChatColor.RED + "[St]", 5),
     EXPERT(ChatColor.RED + "[Ex]", 5),
     CREATOR(ChatColor.RED + "[Cr]", 5),
     MASTER(ChatColor.RED + "[Ma]", 5),
